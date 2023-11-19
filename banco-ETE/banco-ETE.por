@@ -4,7 +4,7 @@ Disciplina: Lógica de Programação
 Discente: João Paulo Falcão
 Docente: Silvio Monte
 Data de criação: 11/10/2023
-Data de modificação: 16/10/2023
+Data de modificação: 19/11/2023
 IDE/Editor: https://dgadelha.github.io/Portugol-Webstudio/
 
 Banco ETE - Projeto final para conclusão do 1º módulo
@@ -24,9 +24,9 @@ programa {
     escreva(nomeTitular)
     escreva("\nAgência: ", agencia)
     escreva("\nConta Corrente: ", numeroContaCorrente, "-", digitoVerificador)
-    escreva("\nSaldo Conta Corrente: R$ ", saldoContaCorrente, "\n")
+    escreva("\nSaldo Conta Corrente: R$ ", saldoContaCorrente)
     escreva("\nConta Poupança: ", numeroContaPoupanca, "-", digitoVerificador)
-    escreva("\nSaldo Conta Poupança: R$ ", saldoContaPoupanca, "\n\n\n")
+    escreva("\nSaldo Conta Poupança: R$ ", saldoContaPoupanca, "\n\n")
   }
 
   // Depósito
@@ -37,10 +37,10 @@ programa {
     leia(valorDeposito)
 
     se (valorDeposito <= 0.0) {
-      escreva("\nDepósito não permitido!\n\n\n")
+      escreva("\nDepósito não permitido!\n\n")
     } senao {
       saldoContaCorrente = saldoContaCorrente + valorDeposito
-      escreva("\nDepósito realizado com sucesso!\n\n\n")
+      escreva("\nDepósito realizado com sucesso!\n\n")
     }
   }
 
@@ -52,12 +52,12 @@ programa {
     leia(valorSaque)
 
     se (valorSaque <= 0.0) {
-      escreva("\nSaque não permitido!\n\n\n")
+      escreva("\nSaque não permitido!\n\n")
     } senao se (saldoContaCorrente < valorSaque) {
-      escreva("\nSaldo insuficiente!\n\n\n")
+      escreva("\nSaldo insuficiente!\n\n")
     } senao {
       saldoContaCorrente = saldoContaCorrente - valorSaque
-      escreva("\nSaque realizado com sucesso!\n\n\n")
+      escreva("\nSaque realizado com sucesso!\n\n")
     }
   }
 
@@ -69,13 +69,13 @@ programa {
     leia(valorTransferencia)
 
     se (valorTransferencia <= 0.0) {
-      escreva("\nTransferência não permitida!\n\n\n")
+      escreva("\nTransferência não permitida!\n\n")
     } senao se (saldoContaCorrente < valorTransferencia){
-      escreva("\nSaldo insuficiente!\n\n\n")
+      escreva("\nSaldo insuficiente!\n\n")
     } senao {
       saldoContaCorrente = saldoContaCorrente - valorTransferencia
       saldoContaPoupanca = saldoContaPoupanca + valorTransferencia
-      escreva("\nTransferência realizada com sucesso!\n\n\n")
+      escreva("\nTransferência realizada com sucesso!\n\n")
     }
   }
 
@@ -87,13 +87,13 @@ programa {
     leia(valorResgate)
 
     se (valorResgate <= 0.0) {
-      escreva("\nResgate não permitido!\n\n\n")
+      escreva("\nResgate não permitido!\n\n")
     } senao se (saldoContaPoupanca < valorResgate){
-      escreva("\nSaldo insuficiente!\n\n\n")
+      escreva("\nSaldo insuficiente!\n\n")
     } senao {
       saldoContaPoupanca = saldoContaPoupanca - valorResgate
       saldoContaCorrente = saldoContaCorrente + valorResgate
-      escreva("\nResgate realizado com sucesso!\n\n\n")
+      escreva("\nResgate realizado com sucesso!\n\n")
     }
   }
   
@@ -136,9 +136,9 @@ programa {
             escreva(nomeTitular)
             escreva("\nAgência: ", agencia)
             escreva("\nConta Corrente: ", numeroContaCorrente, "-", digitoVerificador)
-            escreva("\nConta Poupança: ", numeroContaPoupanca, "-", digitoVerificador, "\n\n\n")
+            escreva("\nConta Poupança: ", numeroContaPoupanca, "-", digitoVerificador)
           } senao {
-            escreva("Não é permitido cadastro de novos clientes!\n\n\n")
+            escreva("Não é permitido cadastro de novos clientes!\n\n")
             pare
           }
 
@@ -150,20 +150,20 @@ programa {
             pare
           }  
         
-          escreva("\nValor do depósito:R$ ")
+          escreva("Valor do depósito:R$ ")
           leia(valorDepositoInicial)
           se (valorDepositoInicial <= 0.0) {
-            escreva("\nDepósito não permitido!\n\n\n")
+            escreva("\nDepósito não permitido!\n\n")
           } senao {
             saldoContaCorrente = saldoContaCorrente + valorDepositoInicial
-            escreva("\nDepósito realizado com sucesso!\n\n\n")
+            escreva("\nDepósito realizado com sucesso!\n\n")
           }
         pare
 
         caso 1:
+          // Verifica se há conta cadastrada
           se (qtdLetrasTitular == 0) {
-            // Verifica se há conta cadastrada
-            escreva("Ainda não há conta cadastrada!\n\n\n")
+            escreva("Ainda não há conta cadastrada!\n\n")
           } senao {
             saldo()
           }
@@ -171,7 +171,7 @@ programa {
 
         caso 2:
           se (qtdLetrasTitular == 0) {
-            escreva("Ainda não há conta cadastrada!\n\n\n")
+            escreva("Ainda não há conta cadastrada!\n\n")
           } senao {
             deposito()
           }
@@ -179,7 +179,7 @@ programa {
 
         caso 3:
           se (qtdLetrasTitular == 0) {
-            escreva("Ainda não há conta cadastrada!\n\n\n")
+            escreva("Ainda não há conta cadastrada!\n\n")
           } senao {
             saque()
           }
@@ -187,7 +187,7 @@ programa {
 
         caso 4:
           se (qtdLetrasTitular == 0) {
-            escreva("Ainda não há conta cadastrada!\n\n\n")
+            escreva("Ainda não há conta cadastrada!\n\n")
           } senao {
             transferencia()
           }
@@ -195,7 +195,7 @@ programa {
 
         caso 5:
           se (qtdLetrasTitular == 0) {
-            escreva("Ainda não há conta cadastrada!\n\n\n")
+            escreva("Ainda não há conta cadastrada!\n\n")
           } senao {
             resgate()
           }
@@ -206,7 +206,7 @@ programa {
         pare
 
         caso contrario:
-          escreva("Opção inválida!\n\n\n")
+          escreva("Opção inválida!\n\n")
         pare
       }
     }

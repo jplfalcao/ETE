@@ -8,7 +8,7 @@ Requisitos **obrigatórios**:
 
 1. Apenas um cliente por execução;
 2. Ao criar conta corrente, obrigatório perguntar se deseja realizar depósito inicial na conta corrente e criar automaticamente conta poupança;
-3. As contas precisam ter:
+3. As contas necessitam de:
     + Nome do titular;
     + Agência;
     + Número da conta;
@@ -19,6 +19,6 @@ Requisitos **obrigatórios**:
     + Aplicar na conta poupança;
     + Exibir saldo.
 5. Operações na Conta Poupança:
-    + Resgate
+    + Resgate;
     + Exibir saldo.
-6. Necessário saldo para transferência entre contas;
+6. Necessário saldo para transferência entre contas.
